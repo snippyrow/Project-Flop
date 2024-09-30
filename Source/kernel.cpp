@@ -6,6 +6,8 @@ int vX = 4;
 int pX = 320/2;
 int pY = 200/2;
 
+int fps = 30;
+
 int sizeX = 10;
 int sizeY = 10;
 
@@ -266,11 +268,19 @@ void gameloop() {
 
     callSwitch();
     if (deadtimer > 300 && !won) {
+
         pX = 320/2;
         pY = 200/2;
+        vX = 4;
+        vY = 0;
         dead = false;
         deadtimer = 0;
         score=0;
+
+        bool xt = random_between(0,1);
+        if (xt) {
+            vX = -vX;
+        }
 
         rage.active = false;
     }
@@ -297,7 +307,7 @@ extern "C" void kmain() {
     kbd_hook = testkey;
     ch0_hook = gameloop;
 
-    initPIT(30); // 30 FPS
+    initPIT(fps); // 30 FPS
     idt_install();
     asm volatile("sti");
 
