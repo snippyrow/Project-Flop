@@ -6,10 +6,11 @@ Other options include using an emulator such as QEMU, where you can simply launc
 
 
 # Controls
-Space to jump, Q to enter cheat mode.
+Space to jump, Q to enter cheat mode. Press A and D to increase or decrease the framerate for extra fun! (20-200)
 
 Collect all the coins and survive as long as you can!
 
 You win once you hit 50000 points, and it gets harder each time you die!
 
 To survive, jump between the grey blades on the walls, and avoid touching the floor and ceiling!
+
