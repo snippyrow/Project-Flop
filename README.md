@@ -1,7 +1,9 @@
 # Project Flop
 *"A game that, you know, will flop!"*
+
 This is a game written on it's own kernel/bootloader, and therefore does not require an OS to run. Only certain computers are capable of running this nativly, such as on a USB. Through my testing, a Thinkpad will work best.
 Other options include using an emulator such as QEMU, where you can simply launch the "game.img" file. A uniquely hard game, nobody has ever beaten it before!
+
 
 # Controls
 Space to jump, Q to enter cheat mode.
