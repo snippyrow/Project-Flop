@@ -7,4 +7,9 @@ Other options include using an emulator such as QEMU, where you can simply launc
 
 # Controls
 Space to jump, Q to enter cheat mode.
-Collect all the coins and survive as long as you can! You win once you hit 50000 points, and it gets harder each time you die!
+
+Collect all the coins and survive as long as you can!
+
+You win once you hit 50000 points, and it gets harder each time you die!
+
+To survive, jump between the grey blades on the walls, and avoid touching the floor and ceiling!
