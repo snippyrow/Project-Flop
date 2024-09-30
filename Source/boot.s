@@ -26,18 +26,16 @@ start:
     mov dl, 0x80 ; primary hard disk
 
     mov ah, 2 ; BIOS code
-
     int 0x13
-
     jc mem_read_err ; carry set if error
 
 
-    mov ax, 0xaaaa ; load to 0x15000
+    ; Load font set into memory
+    mov ax, 0xa000 ; load to 0x15000
     mov bx, ax
     mov ax, 0
     mov es, ax
 
-    ; Load reading arguments (for assets)
     mov al, 40 ; Number of sectors to read
     mov ch, 0  ; Cylinder to read
     mov cl, 1  ; Starting sector to read from
@@ -45,9 +43,25 @@ start:
     mov dl, 0x80 ; primary hard disk
 
     mov ah, 2 ; BIOS code
-
     int 0x13
+    jc mem_read_err
 
+
+    ; Load ragebait into memory
+    mov ax, 0xe000 ; load to 0x15000
+    mov bx, ax
+    mov ax, 0
+    mov es, ax
+
+    ; 32x32 = 1024B, 2 sectors
+    mov al, 8 ; Number of sectors to read
+    mov ch, 0  ; Cylinder to read
+    mov cl, 42  ; Starting sector to read from
+    mov dh, 1  ; Head to read from
+    mov dl, 0x80 ; primary hard disk
+
+    mov ah, 2 ; BIOS code
+    int 0x13
     jc mem_read_err
 
     ; Set video mode to 320x200 8-bit color using BIOS

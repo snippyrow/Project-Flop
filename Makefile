@@ -13,7 +13,9 @@ link:
 	cat "Binaries/boot.bin" "Binaries/full.bin" "Binaries/zeroes.bin" > "Binaries/game.bin"
 run:
 	dd if=Binaries/game.bin of=game.img bs=512 count=63
-	dd if=bg.bin of=game.img bs=512 seek=63
+	# Now attach assets
+	dd if=font.bin of=game.img bs=512 seek=63
+	dd if=rage.bin of=game.img bs=512 seek=104
 	qemu-system-x86_64 \
     -drive file=game.img,format=raw,index=0,if=ide \
     -m 128M \
