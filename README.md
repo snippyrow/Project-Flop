@@ -3,6 +3,7 @@
 
 This is a game written on it's own kernel/bootloader, and therefore does not require an OS to run. Only certain computers are capable of running this nativly, such as on a USB. Through my testing, a Thinkpad will work best.
 Other options include using an emulator such as QEMU, where you can simply launch the "game.img" file. A uniquely hard game, nobody has ever beaten it before!
+- Adding any more code will cause the program to run into the buffer, so don't change anything to much!
 
 
 # Controls
