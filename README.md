@@ -6,7 +6,7 @@ Other options include using an emulator such as QEMU, where you can simply launc
 
 
 # Controls
-Space to jump, Q to enter cheat mode. Press A and D to increase or decrease the framerate for extra fun! (20-200)
+Space to jump, Q to enter cheat mode.
 
 Collect all the coins and survive as long as you can!
 
